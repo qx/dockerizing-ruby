@@ -16,6 +16,13 @@ Start the server:
 $ docker-compose up --build
 ```
 
+```bash
+#ctrl+c to stop
+$ docker-compose run drkiq rake db:create
+$ docker-compose run drkiq rake db:migrate
+$ docker-compose run drkiq rake db:seed
+$ docker-compose run drkiq rake assets:precompile #for production nginx
+```
 Browse http://localhost:8020
 
 ## License
